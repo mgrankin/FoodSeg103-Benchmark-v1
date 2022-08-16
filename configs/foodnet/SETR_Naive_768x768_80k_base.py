@@ -3,7 +3,7 @@ _base_ = [
     '../_base_/datasets/FoodSeg103_768x768.py', '../_base_/default_runtime.py',
     '../_base_/schedules/schedule_80k.py'
 ]
-norm_cfg = dict(type='SyncBN', requires_grad=True)
+norm_cfg = dict(type='BN', requires_grad=True)
 model = dict(
     backbone=dict(
         img_size=768, 
